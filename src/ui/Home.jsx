@@ -7,8 +7,7 @@ import Button from "./Button";
 function Home() {
   const username = useSelector((state) => state.user.username);
 
-  const isMobileScreen = window.innerWidth < 768;
-  console.log(Pizza);
+ 
 
   return (
     <div className="">
@@ -30,11 +29,11 @@ function Home() {
           )}
         </div>
         <div className="mt-5 h-full w-full text-center md:mt-0 md:w-1/2">
-          <img
-            src={`${isMobileScreen ? PizzaMobile : Pizza}`}
-            alt="Piiza Image"
-            className="rounded-lg shadow-lg"
-          />
+          <picture>
+            <source media="(min-width:768px)" srcset={Pizza}>
+            <img src={PizzaMobile} alt="Pizza Image" className="rounded-lg shadow-lg">
+          </picture>
+          
         </div>
       </div>
     </div>
