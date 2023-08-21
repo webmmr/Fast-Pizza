@@ -31,13 +31,9 @@ function Home() {
         <div className="mt-5 h-full w-full text-center md:mt-0 md:w-1/2">
           <picture>
             <source media="(min-width:768px)" srcset={Pizza}>
-            <img src={PizzaMobile} alt="Pizza Image" className="rounded-lg shadow-lg">
+            <img src={PizzaMobile} alt="Pizza Image" className="rounded-lg shadow-lg" />
           </picture>
-          <img
-            src={`${isMobileScreen ? PizzaMobile : Pizza}`}
-            alt="Piiza Image"
-            className="rounded-lg shadow-lg"
-          />
+          
         </div>
       </div>
     </div>
